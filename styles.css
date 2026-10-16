@@ -1,0 +1,7 @@
+.alg-viewer { max-width: 100%; margin: .5rem 0; }
+.alg-viewer .alg-view-svg { overflow: auto; max-height: 640px; background: #fff; border: 1px solid #ced4da; border-radius: .25rem; }
+.alg-viewer .alg-view-svg svg { display: block; margin: 0 auto; }
+.alg-viewer .alg-view-bar { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin: .4rem 0; }
+.alg-viewer .alg-speed { width: 100px; }
+.alg-viewer .alg-console { min-height: 70px; max-height: 220px; }
+.alg-viewer .alg-node.alg-running > :first-child { fill: #fdba74; }
