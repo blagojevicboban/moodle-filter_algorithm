@@ -5,3 +5,14 @@
 .alg-viewer .alg-speed { width: 100px; }
 .alg-viewer .alg-console { min-height: 70px; max-height: 220px; }
 .alg-viewer .alg-node.alg-running > :first-child { fill: #fdba74; }
+.alg-viewer { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 1rem; align-items: start; }
+.alg-viewer.alg-hide-code { grid-template-columns: minmax(0, 1fr); }
+.alg-viewer.alg-hide-code .alg-view-code { display: none; }
+.alg-viewer .alg-view-code { min-width: 0; }
+.alg-viewer .alg-code-bar { display: flex; align-items: center; gap: .4rem; margin-bottom: .4rem; }
+.alg-viewer .alg-code-bar .alg-codelang { width: auto; }
+.alg-viewer .alg-code { max-height: 640px; overflow: auto; margin: 0; padding: .6rem; font-size: .85rem; background: #f8f9fa;
+    border: 1px solid #ced4da; border-radius: .25rem; white-space: pre; }
+@media (max-width: 899px) {
+    .alg-viewer { grid-template-columns: minmax(0, 1fr); }
+}

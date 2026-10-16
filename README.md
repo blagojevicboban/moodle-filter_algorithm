@@ -11,6 +11,8 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 - **Run / Step / Reset**: Run the whole algorithm, or step through it one block at a time with the current block highlighted
   on the diagram.
 - **Console with Input**: *Output* blocks print to a console, *Input* blocks show an input field.
+- **Code Next to the Diagram**: The generated **Python, C, Java or C#** code is shown beside the diagram, with a language
+  selector and a **Copy** button. The **Code** button hides or shows the panel. On narrow screens the code goes below.
 - **Speed Slider**: Slow it down to follow the logic, or speed it up.
 - **Zoom**: **−**, **+**, **100%** and **Fit** buttons or **Ctrl + mouse wheel**. Wide diagrams start fitted to the available
   width.
@@ -47,7 +49,7 @@ The compiled AMD module is included in `amd/build`.
 
 1. In the TinyMCE editor open a diagram with the **Algorithm** button (or double-click an existing one).
 2. Tick **Interactive** and click **Insert**, then save the page.
-3. Readers now see the diagram with **Run / Step / Reset**, a speed slider, zoom buttons and a console.
+3. Readers now see the diagram with **Run / Step / Reset**, a speed slider, zoom buttons, a console and the generated code.
 
 A diagram inserted **without** the Interactive option stays a normal image; open it again, tick the option and insert it again
 to change that.
