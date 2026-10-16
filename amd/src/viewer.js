@@ -24,7 +24,11 @@ const mount = (root) => {
         const host = document.createElement('div');
         host.className = 'alg-viewer-host';
         img.replaceWith(host);
-        new AlgorithmRunner(host, program, {lang: document.documentElement.lang});
+        new AlgorithmRunner(host, program, {
+            lang: document.documentElement.lang,
+            showCode: img.getAttribute('data-algorithm-code') !== '0',
+            showWatch: img.getAttribute('data-algorithm-watch') !== '0',
+        });
     });
 };
 

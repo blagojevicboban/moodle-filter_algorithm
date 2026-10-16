@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 – 2026-10-17 (alpha)
+
+- Variable watch panel and a code panel that can be hidden, both honouring the per-diagram options (`data-algorithm-code="0"`,
+  `data-algorithm-watch="0"`).
+- The styles are now part of `tiny_algorithm` (they belong to its runner module).
+
 ## 0.2.0 – 2026-10-16 (alpha)
 
 - Shows the generated code (Python, C, Java, C#) next to the diagram with a language selector, Copy and a Code toggle button.

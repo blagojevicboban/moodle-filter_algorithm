@@ -12,7 +12,10 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
   on the diagram.
 - **Console with Input**: *Output* blocks print to a console, *Input* blocks show an input field.
 - **Code Next to the Diagram**: The generated **Python, C, Java or C#** code is shown beside the diagram, with a language
-  selector and a **Copy** button. The **Code** button hides or shows the panel. On narrow screens the code goes below.
+  selector and a **Copy** button. The **Code** and **Variables** buttons hide or show the panels (the choice is remembered). On a
+  narrow content area the code goes below the diagram.
+- **Options per Diagram**: the author can switch the code and variable panels off when inserting the diagram.
+- **Variable Watch**: A table with the value of every variable at the current step, with changed values highlighted.
 - **Speed Slider**: Slow it down to follow the logic, or speed it up.
 - **Zoom**: **−**, **+**, **100%** and **Fit** buttons or **Ctrl + mouse wheel**. Wide diagrams start fitted to the available
   width.
