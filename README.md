@@ -23,7 +23,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 | 🔎 **Zoom** | **−**, **+**, **100%**, **Fit** or **Ctrl + mouse wheel**; wide diagrams start fitted |
 | 🧳 **Runs in the Browser** | Nothing is sent to the server, nothing is stored |
 | ✅ **Opt-in per Diagram** | Only diagrams inserted with **Interactive** are replaced; others stay normal images |
-| 🌐 **Languages** | English and Serbian (Latin) |
+| 🌐 **Languages** | English, Serbian Latin and Serbian Cyrillic |
 | 🔒 **Privacy** | GDPR compliant (Privacy API, no personal data stored) |
 
 ## 📋 Requirements
@@ -87,7 +87,7 @@ filter/algorithm/
 │   ├── src/          # viewer.js
 │   └── build/        # Compiled module
 ├── classes/          # text_filter, privacy provider
-├── lang/             # en, sr_lt
+├── lang/             # en, sr_lt, sr_cr
 ├── styles.css
 └── version.php       # Plugin metadata
 ```
@@ -95,7 +95,8 @@ filter/algorithm/
 ## 🌍 Languages
 
 - 🇬🇧 English
-- 🇷🇸 Srpski (Serbian, Latin)
+- 🇷🇸 Srpski (Serbian, Latin: sr_lt)
+- 🇷🇸 Српски (Serbian, Cyrillic: sr_cr)
 
 ## 📝 Changelog
 
