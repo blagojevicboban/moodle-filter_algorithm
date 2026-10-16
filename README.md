@@ -1,92 +1,120 @@
-# Algorithm Viewer – Run / Step for Flowcharts (Moodle Filter)
+# Algorithm Viewer - Run / Step for Flowcharts (Moodle Filter)
+
+[![Moodle Plugin CI](https://github.com/blagojevicboban/moodle-filter_algorithm/actions/workflows/ci.yml/badge.svg)](https://github.com/blagojevicboban/moodle-filter_algorithm/actions/workflows/ci.yml)
+[![Moodle](https://img.shields.io/badge/Moodle-4.5%20to%205.3-orange.svg)](https://moodle.org)
+[![PHP](https://img.shields.io/badge/PHP-8.2%2B-purple.svg)](https://php.net)
+[![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
 
 **Algorithm Viewer** is a Moodle text filter that makes flowcharts created with
 [tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) **interactive for readers**. Wherever the filtered
 text is shown (a Page, course summary, forum post, quiz text…), the diagram gets **Run**, **Step** and **Reset** buttons.
 
-> Status: **alpha**. Tested on Moodle 5.3 with a Page resource and the course summary, as the admin user.
+> Status: **alpha**.
 
-## Features
+## ✨ Features
 
-- **Run / Step / Reset**: Run the whole algorithm, or step through it one block at a time with the current block highlighted
-  on the diagram.
-- **Console with Input**: *Output* blocks print to a console, *Input* blocks show an input field.
-- **Code Next to the Diagram**: The generated **Python, C, Java or C#** code is shown beside the diagram, with a language
-  selector and a **Copy** button. The **Code** and **Variables** buttons hide or show the panels (the choice is remembered). On a
-  narrow content area the code goes below the diagram.
-- **Options per Diagram**: the author can switch the code and variable panels off when inserting the diagram.
-- **Variable Watch**: A table with the value of every variable at the current step, with changed values highlighted.
-- **Speed Slider**: Slow it down to follow the logic, or speed it up.
-- **Zoom**: **−**, **+**, **100%** and **Fit** buttons or **Ctrl + mouse wheel**. Wide diagrams start fitted to the available
-  width.
-- **Runs in the Reader's Browser**: Nothing is sent to the server and nothing is stored.
-- **Opt-in per Diagram**: Only diagrams that were inserted with the **Interactive** option are replaced. Other diagrams stay
-  normal images. If the model cannot be read, the original image is left in place.
-- **Languages**: English and Serbian (Latin).
-- **Privacy Compliant**: Implements the Moodle Privacy API (null provider – no personal data stored).
+| Feature | Description |
+|---------|-------------|
+| ▶️ **Run / Step / Reset** | Run the whole algorithm or step one block at a time, the current block is highlighted |
+| ⌨️ **Console with Input** | *Output* blocks print to a console, *Input* blocks show an input field |
+| 💻 **Code Beside the Diagram** | Python, C, Java or C# with a language selector and **Copy**; below the diagram on narrow pages |
+| 🔍 **Variable Watch** | Value of every variable at the current step, changed values highlighted |
+| 🐢 **Speed Slider** | Slow down to follow the logic, or speed up |
+| 🔎 **Zoom** | **−**, **+**, **100%**, **Fit** or **Ctrl + mouse wheel**; wide diagrams start fitted |
+| 🧳 **Runs in the Browser** | Nothing is sent to the server, nothing is stored |
+| ✅ **Opt-in per Diagram** | Only diagrams inserted with **Interactive** are replaced; others stay normal images |
+| 🌐 **Languages** | English and Serbian (Latin) |
+| 🔒 **Privacy** | GDPR compliant (Privacy API, no personal data stored) |
 
-## Related Plugins
+## 📋 Requirements
 
-- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm)** – the TinyMCE flowchart editor that creates the
-  diagrams. **Required**: this filter imports its `runner`, `render`, `model`, `interpreter` and `zoom` modules.
+- **Moodle**: 4.5 LTS or newer (4.5, 5.0, 5.1, 5.2 and 5.3 tested)
+- **PHP**: 8.2+
+- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm)**: must be installed first (this filter reuses its
+  `runner`, `render`, `model`, `interpreter` and `zoom` modules)
 
-## Compatibility
+## 🚀 Installation
 
-| Moodle Version   | Status                                  |
-|------------------|-----------------------------------------|
-| Moodle 5.0 – 5.3 | ✅ Tested                               |
-| Moodle 4.5 LTS   | ✅ Tested                               |
-| Moodle < 4.5     | ❌ Not supported (requires Moodle 4.5+) |
+### Via Git
+```bash
+cd /path/to/moodle/public/filter          # Moodle 5.1+; use filter/ in the Moodle root before 5.1
+git clone https://github.com/blagojevicboban/moodle-filter_algorithm.git algorithm
+php admin/cli/upgrade.php
+```
 
-## Installation
+### Via Download
+1. Install **tiny_algorithm** first
+2. Download the [latest release](https://github.com/blagojevicboban/moodle-filter_algorithm/releases)
+3. Extract to `filter/algorithm` (`public/filter/algorithm` in Moodle 5.1+)
+4. Visit Site Administration → Notifications
 
-1. Install **tiny_algorithm** first.
-2. Place this plugin folder in `filter/algorithm` (Moodle 4.5 and 5.0) or `public/filter/algorithm` (Moodle 5.1 and later).
-3. Log in as an administrator and go to **Site administration → Notifications** to complete the installation.
-4. Go to **Site administration → Plugins → Filters → Manage filters** and set **Algorithm viewer (Run / Step)** to **On**.
-   It can be switched off again for a single course or activity from the filter settings there.
+Then go to **Site administration → Plugins → Filters → Manage filters** and set **Algorithm viewer (Run / Step)** to **On**.
+It can be switched off for a single course or activity there as well. The compiled AMD module is included in `amd/build`.
 
-The compiled AMD module is included in `amd/build`.
+## 📖 Usage
 
-## Usage
+### For Teachers
 
-1. In the TinyMCE editor open a diagram with the **Algorithm** button (or double-click an existing one).
-2. Tick **Interactive** and click **Insert**, then save the page.
-3. Readers now see the diagram with **Run / Step / Reset**, a speed slider, zoom buttons, a console and the generated code.
+1.  In the TinyMCE editor open a diagram with the **Algorithm** button (or double-click an existing one).
+2.  Tick **Interactive** and click **Insert**, then save the page.
+3.  To change an old diagram, open it again, tick the option and insert it again.
 
-A diagram inserted **without** the Interactive option stays a normal image; open it again, tick the option and insert it again
-to change that.
+### For Students
 
-## Permissions
+1.  Open the page: the diagram has **Run / Step / Reset**, a speed slider, zoom buttons, a console and the generated code.
+2.  Use **Code** and **Variables** to hide or show the panels (the choice is remembered).
+3.  Type values into the console when an *Input* block asks for them.
+
+If the model cannot be read, the original image is left in place.
+
+## 🔑 Permissions
 
 The filter needs no capabilities and no settings. Who can create interactive diagrams is controlled by the editor plugin
 (`tiny/algorithm:viewplugin`).
 
-## Building from Source
-
-If you modify `amd/src/viewer.js`, rebuild the AMD module from the Moodle root:
+## 🛠️ Development
 
 ```bash
+# Rebuild the AMD module after changing amd/src/viewer.js (from the Moodle root)
 npx grunt amd --root=public/filter/algorithm
 ```
 
-## Technical Requirements
+## 📁 Structure
 
-- Moodle 4.5 or higher (4.5 and 5.0 – 5.3 tested)
-- [tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) installed
-- Node.js 20+ (only for building AMD modules if you modify the source)
+```
+filter/algorithm/
+├── amd/
+│   ├── src/          # viewer.js
+│   └── build/        # Compiled module
+├── classes/          # text_filter, privacy provider
+├── lang/             # en, sr_lt
+├── styles.css
+└── version.php       # Plugin metadata
+```
 
-## Changelog
+## 🌍 Languages
 
-See [CHANGELOG.md](CHANGELOG.md) for version history.
+- 🇬🇧 English
+- 🇷🇸 Srpski (Serbian, Latin)
 
-## License
+## 📝 Changelog
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as
-published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+See [CHANGELOG.md](CHANGELOG.md).
 
-See [LICENSE](LICENSE) for details.
+## 📄 License
+
+GNU GPL v3 or later - see [LICENSE](LICENSE).
+
+## 👤 Author
+
+**Boban Blagojević**  
+[GitHub](https://github.com/blagojevicboban)
+
+## 🙏 Credits
+
+- [tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) - the editor and runner this filter builds on
+- [Flowgorithm](https://www.flowgorithm.org/) - the flowchart style that inspired the project
 
 ---
 
-© 2026 [Boban Blagojević](https://github.com/blagojevicboban)
+Made with ❤️ for teaching programming

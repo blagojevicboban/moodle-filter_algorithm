@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Supports **Moodle 4.5 LTS** (`requires` lowered to 4.5, `supported` 4.5 – 5.3); tested on 4.5, 5.0 – 5.3.
+- Moodle coding standard: phpcs, ESLint and stylelint report no problems; GitHub Actions (moodle-plugin-ci) added.
+- New README and `description.html` for the Moodle plugins directory.
+
 ## 0.3.0 – 2026-10-17 (alpha)
 
 - Variable watch panel and a code panel that can be hidden, both honouring the per-diagram options (`data-algorithm-code="0"`,
