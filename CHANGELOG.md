@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0 – 2026-10-28 (alpha)
+
+- Diagrams with `data-algorithm-edit="1"` get the student workspace of `tiny_algorithm` 0.5.0: edit an own copy, run the
+  teacher's tests, restore the original, full screen and (when allowed) show the solution.
+- Requires `tiny_algorithm` 0.5.0 (2026102800).
+
 ## 0.4.0 – 2026-10-16 (alpha)
 
 - Supports **Moodle 4.5 LTS** (`requires` lowered to 4.5, `supported` 4.5 – 5.3); tested on 4.5, 5.0 – 5.3.

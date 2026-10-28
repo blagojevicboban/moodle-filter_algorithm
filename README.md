@@ -21,7 +21,8 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 | 🔍 **Variable Watch** | Value of every variable at the current step, changed values highlighted |
 | 🐢 **Speed Slider** | Slow down to follow the logic, or speed up |
 | 🔎 **Zoom** | **−**, **+**, **100%**, **Fit** or **Ctrl + mouse wheel**; wide diagrams start fitted |
-| 🧳 **Runs in the Browser** | Nothing is sent to the server, nothing is stored |
+| 🧳 **Runs in the Browser** | Nothing is sent to the server; a student's edited copy is kept only in their browser |
+| ✍️ **Edit and Test** | When the teacher allows it: **Edit** an own copy, **Test** against the teacher's tests (✓ / ✗ with the differences), **Restore original**, **Full screen**, **Show solution** |
 | ✅ **Opt-in per Diagram** | Only diagrams inserted with **Interactive** are replaced; others stay normal images |
 | 🌐 **Languages** | English, Serbian Latin and Serbian Cyrillic |
 | 🔒 **Privacy** | GDPR compliant (Privacy API, no personal data stored) |
@@ -58,12 +59,16 @@ It can be switched off for a single course or activity there as well. The compil
 1.  In the TinyMCE editor open a diagram with the **Algorithm** button (or double-click an existing one).
 2.  Tick **Interactive** and click **Insert**, then save the page.
 3.  To change an old diagram, open it again, tick the option and insert it again.
+4.  For an exercise, tick **Students can edit and test the algorithm** and add tests (and optionally a starting template) in
+    the dialog - see the `tiny_algorithm` README.
 
 ### For Students
 
 1.  Open the page: the diagram has **Run / Step / Reset**, a speed slider, zoom buttons, a console and the generated code.
 2.  Use **Code** and **Variables** to hide or show the panels (the choice is remembered).
 3.  Type values into the console when an *Input* block asks for them.
+4.  In an exercise, click **Edit** to change your copy, **Test** to run the teacher's tests, **Restore original** to start over.
+    Your copy stays in this browser after a reload.
 
 If the model cannot be read, the original image is left in place.
 
