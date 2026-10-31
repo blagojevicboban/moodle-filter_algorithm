@@ -9,7 +9,7 @@
 [tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) **interactive for readers**. Wherever the filtered
 text is shown (a Page, course summary, forum post, quiz text…), the diagram gets **Run**, **Step** and **Reset** buttons.
 
-> Status: **alpha**.
+> Status: **stable** (1.0).
 
 ## ✨ Features
 
@@ -17,7 +17,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 |---------|-------------|
 | ▶️ **Run / Step / Reset** | Run the whole algorithm or step one block at a time, the current block is highlighted |
 | ⌨️ **Console with Input** | *Output* blocks print to a console, *Input* blocks show an input field |
-| 💻 **Code Beside the Diagram** | Python, C, Java or C# with a language selector and **Copy**; below the diagram on narrow pages |
+| 💻 **Code Beside the Diagram** | Python, C, C++, Java, C#, JavaScript or Pascal with a language selector and **Copy**; below the diagram on narrow pages |
 | 🔍 **Variable Watch** | Value of every variable at the current step, changed values highlighted |
 | 🐢 **Speed Slider** | Slow down to follow the logic, or speed up |
 | 🔎 **Zoom** | **−**, **+**, **100%**, **Fit** or **Ctrl + mouse wheel**; wide diagrams start fitted |
@@ -31,7 +31,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 
 - **Moodle**: 4.5 LTS or newer (4.5, 5.0, 5.1, 5.2 and 5.3 tested)
 - **PHP**: 8.2+
-- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm)**: must be installed first (this filter reuses its
+- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) 1.0.0+**: must be installed first (this filter reuses its
   `runner`, `render`, `model`, `interpreter` and `zoom` modules)
 
 ## 🚀 Installation

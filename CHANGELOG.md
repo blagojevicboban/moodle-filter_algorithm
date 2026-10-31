@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0 – 2026-10-31 (stable)
+
+- **Stable release.**
+- The viewer loads the widget texts from the language files of tiny_algorithm before it builds the diagrams, so they follow
+  the user's language and can be translated in AMOS; the generated code is also available in C++, JavaScript and Pascal.
+- `amd/src/viewer.js` has the Moodle GPL boilerplate (Fixes #1).
+- Requires `tiny_algorithm` 1.0.0 (2026103100).
+
 ## 0.5.0 – 2026-10-28 (alpha)
 
 - Diagrams with `data-algorithm-edit="1"` get the student workspace of `tiny_algorithm` 0.5.0: edit an own copy, run the
