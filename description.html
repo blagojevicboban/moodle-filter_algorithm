@@ -9,23 +9,23 @@
     <li><strong>Zoom</strong> buttons and Ctrl + mouse wheel.</li>
     <li><strong>Runs in the reader's browser:</strong> nothing is sent to the server.</li>
     <li><strong>Opt-in per diagram:</strong> only diagrams inserted with the Interactive option are replaced.</li>
+    <li><strong>Edit and test:</strong> when the teacher allows it, students edit their own copy and run the teacher's tests.</li>
   </ul>
 
-  <h3>What's new in 0.4.0</h3>
+  <h3>What's new in 0.5.0</h3>
   <ul>
-    <li>Supports Moodle 4.5 LTS and 5.0 - 5.3 (tested on all of them).</li>
-    <li>Serbian Cyrillic language files; the viewer picks Latin or Cyrillic from the Moodle language.</li>
-    <li>Moodle coding standard (phpcs, ESLint, stylelint) and GitHub Actions with moodle-plugin-ci.</li>
+    <li><strong>Student workspace:</strong> on diagrams where the teacher ticked Students can edit and test the algorithm, students get Edit (an own copy kept in their browser), Test (each test marked passed or failed, with the expected and actual output side by side), Restore original, Full screen and optionally Show solution.</li>
+    <li>Diagrams without this option work as before.</li>
   </ul>
 
   <h3>Requirements</h3>
   <ul>
     <li>Moodle 4.5 LTS to 5.3 (PHP as required by your Moodle version).</li>
-    <li>The tiny_algorithm plugin. After installing, switch the filter <strong>On</strong> in Site administration, Plugins, Filters, Manage filters.</li>
+    <li>The tiny_algorithm plugin, version 0.5.0 or newer. After installing, switch the filter <strong>On</strong> in Site administration, Plugins, Filters, Manage filters.</li>
   </ul>
 
   <h3>Privacy</h3>
-  <p>The program runs in the reader's browser and nothing is sent anywhere. Two display preferences (code and variable panels) are kept in the browser's local storage. The plugin implements the Moodle Privacy API (no personal data stored).</p>
+  <p>The program runs in the reader's browser and nothing is sent anywhere. Two display preferences (code and variable panels) and the student's own copy of an editable diagram are kept in the browser's local storage. The plugin implements the Moodle Privacy API (no personal data stored).</p>
 
   <p>Languages: English and Serbian (Latin and Cyrillic). Source, documentation and issue tracker:
     <a href="https://github.com/blagojevicboban/moodle-filter_algorithm" target="_blank" rel="noreferrer noopener">github.com/blagojevicboban/moodle-filter_algorithm</a>.
