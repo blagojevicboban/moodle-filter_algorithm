@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0 – 2026-11-01 (stable)
+
+- With tiny_algorithm 1.1.0: error messages in the user's language, keyboard use of the student editor, the running block
+  marked by its border too.
+- `privacy:metadata` mentions the display settings and the student's copy that the browser keeps in its local storage.
+- PHPUnit tests for `text_filter` (the text is unchanged; the viewer is loaded only for interactive diagrams).
+- Screenshots in `docs/screenshots/`.
+- Requires `tiny_algorithm` 1.1.0 (2026110100).
+
 ## 1.0.0 – 2026-10-31 (stable)
 
 - **Stable release.**

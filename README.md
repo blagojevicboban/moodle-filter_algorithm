@@ -25,13 +25,20 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 | ✍️ **Edit and Test** | When the teacher allows it: **Edit** an own copy, **Test** against the teacher's tests (✓ / ✗ with the differences), **Restore original**, **Full screen**, **Show solution** |
 | ✅ **Opt-in per Diagram** | Only diagrams inserted with **Interactive** are replaced; others stay normal images |
 | 🌐 **Languages** | English, Serbian Latin and Serbian Cyrillic |
-| 🔒 **Privacy** | GDPR compliant (Privacy API, no personal data stored) |
+| 🔒 **Privacy** | GDPR compliant (Privacy API, no personal data on the server; display settings and students' edited copies stay in the browser) |
+
+## 🖼️ Screenshots
+
+| | |
+|---|---|
+| **Page: Run, code beside the diagram, variables** | **Quiz: a diagram in a multiple choice question** |
+| ![Page](docs/screenshots/reader-view.png) | ![Quiz](docs/screenshots/quiz-analyse.png) |
 
 ## 📋 Requirements
 
 - **Moodle**: 4.5 LTS or newer (4.5, 5.0, 5.1, 5.2 and 5.3 tested)
 - **PHP**: 8.2+
-- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) 1.0.0+**: must be installed first (this filter reuses its
+- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) 1.1.0+**: must be installed first (this filter reuses its
   `runner`, `render`, `model`, `interpreter` and `zoom` modules)
 
 ## 🚀 Installation

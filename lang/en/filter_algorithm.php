@@ -26,4 +26,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['filtername'] = 'Algorithm viewer (Run / Step)';
 $string['pluginname'] = 'Algorithm viewer (Run / Step)';
-$string['privacy:metadata'] = 'The Algorithm viewer filter does not store any personal data.';
+$string['privacy:metadata'] = 'The Algorithm viewer filter does not store any personal data on the server. The browser keeps a few display settings and, in editable diagrams, the student\'s own copy of the algorithm in its local storage.';

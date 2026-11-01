@@ -26,4 +26,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['filtername'] = 'Prikaz algoritma (Pokreni / Korak)';
 $string['pluginname'] = 'Prikaz algoritma (Pokreni / Korak)';
-$string['privacy:metadata'] = 'Filter za prikaz algoritama ne čuva nikakve lične podatke.';
+$string['privacy:metadata'] = 'Filter za prikaz algoritama ne čuva lične podatke na serveru. Pregledač u svom lokalnom skladištu čuva nekoliko podešavanja prikaza i, kod dijagrama koje učenici mogu da menjaju, učenikovu kopiju algoritma.';
