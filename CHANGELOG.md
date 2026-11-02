@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.0 – 2026-11-02 (stable)
+
+- With tiny_algorithm 2.0.0: diagrams stored only in their SVG (read with the classes `tiny_algorithm-image` /
+  `tiny_algorithm-run`), matrices, function tests in the exercises. Diagrams from 1.x keep working.
+- Requires `tiny_algorithm` 2.0.0 (2026110203).
+
 ## 1.2.0 – 2026-11-02 (stable)
 
 - **Fixed: interactive diagrams in forum posts, assignment text and other cleaned content.** The filter also loads the viewer
