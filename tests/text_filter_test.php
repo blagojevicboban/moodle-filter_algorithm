@@ -52,4 +52,14 @@ final class text_filter_test extends \advanced_testcase {
         $this->assertSame($text, $filter->filter($text));
         $this->assertTrue($this->viewer_loaded());
     }
+
+    public function test_cleaned_interactive_algorithm(): void {
+        $this->resetAfterTest();
+        $filter = new text_filter(\context_system::instance(), []);
+        $text = purify_html('<p><img src="@@PLUGINFILE@@/sum.svg" class="tiny_algorithm-image tiny_algorithm-run" ' .
+            'alt="Algorithm" data-algorithm="AAAA" data-algorithm-run="1"></p>');
+        $this->assertStringNotContainsString('data-algorithm', $text);
+        $this->assertSame($text, $filter->filter($text));
+        $this->assertTrue($this->viewer_loaded());
+    }
 }

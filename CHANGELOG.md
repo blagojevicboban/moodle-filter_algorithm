@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.0 – 2026-11-02 (stable)
+
+- **Fixed: interactive diagrams in forum posts, assignment text and other cleaned content.** The filter also loads the viewer
+  for images with the `tiny_algorithm-run` class, and the viewer reads the model and the options from the SVG file when the
+  cleaning removed the `data-algorithm` attributes (diagrams inserted with tiny_algorithm 1.2.0).
+- Lazy mount: a diagram is built when it comes near the screen (IntersectionObserver), so long pages open quickly.
+- CSS class of the viewer host renamed to `tiny_algorithm-viewer-host`.
+- PHPUnit test with a text cleaned by `purify_html`.
+- Requires `tiny_algorithm` 1.2.0 (2026110201).
+
 ## 1.1.0 – 2026-11-01 (stable)
 
 - With tiny_algorithm 1.1.0: error messages in the user's language, keyboard use of the student editor, the running block

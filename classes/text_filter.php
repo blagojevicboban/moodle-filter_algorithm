@@ -25,7 +25,7 @@
 namespace filter_algorithm;
 
 /**
- * Turns interactive algorithm images (data-algorithm-run) into diagrams with Run / Step controls.
+ * Turns interactive algorithm images (data-algorithm-run or the tiny_algorithm-run class) into diagrams with Run / Step controls.
  *
  * @package    filter_algorithm
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -40,7 +40,8 @@ class text_filter extends \core_filters\text_filter {
      */
     public function filter($text, array $options = []) {
         global $PAGE;
-        if (!is_string($text) || strpos($text, 'data-algorithm-run') === false) {
+        // Moodle's HTML cleaning removes the data attributes; the image then keeps only its tiny_algorithm-run class.
+        if (!is_string($text) || (strpos($text, 'data-algorithm-run') === false && strpos($text, 'tiny_algorithm-run') === false)) {
             return $text;
         }
         $PAGE->requires->js_call_amd('filter_algorithm/viewer', 'init');

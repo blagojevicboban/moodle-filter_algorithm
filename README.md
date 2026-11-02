@@ -23,6 +23,8 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 | 🔎 **Zoom** | **−**, **+**, **100%**, **Fit** or **Ctrl + mouse wheel**; wide diagrams start fitted |
 | 🧳 **Runs in the Browser** | Nothing is sent to the server; a student's edited copy is kept only in their browser |
 | ✍️ **Edit and Test** | When the teacher allows it: **Edit** an own copy, **Test** against the teacher's tests (✓ / ✗ with the differences), **Restore original**, **Full screen**, **Show solution** |
+| 💬 **Forums and Assignments** | Also works where Moodle cleans the HTML (forum posts, assignment text…), for diagrams inserted with tiny_algorithm 1.2.0 or newer |
+| 🚀 **Fast Pages** | A diagram is built only when it comes near the screen, so a page with many diagrams opens quickly |
 | ✅ **Opt-in per Diagram** | Only diagrams inserted with **Interactive** are replaced; others stay normal images |
 | 🌐 **Languages** | English, Serbian Latin and Serbian Cyrillic |
 | 🔒 **Privacy** | GDPR compliant (Privacy API, no personal data on the server; display settings and students' edited copies stay in the browser) |
@@ -38,7 +40,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 
 - **Moodle**: 4.5 LTS or newer (4.5, 5.0, 5.1, 5.2 and 5.3 tested)
 - **PHP**: 8.2+
-- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) 1.1.0+**: must be installed first (this filter reuses its
+- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) 1.2.0+**: must be installed first (this filter reuses its
   `runner`, `render`, `model`, `interpreter` and `zoom` modules)
 
 ## 🚀 Installation
