@@ -25,14 +25,15 @@
 namespace filter_algorithm;
 
 /**
- * Turns interactive algorithm images (data-algorithm-run or the tiny_algorithm-run class) into diagrams with Run / Step controls.
+ * Turns interactive algorithm images (data-algorithm-run or the tiny_algorithm-run class) into diagrams with Run / Step controls
+ * and draws the other algorithm images again with the current version of the editor.
  *
  * @package    filter_algorithm
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class text_filter extends \core_filters\text_filter {
     /**
-     * Load the viewer module when the text contains an interactive algorithm; the text itself is left unchanged.
+     * Load the viewer module when the text contains an algorithm image; the text itself is left unchanged.
      *
      * @param string $text
      * @param array $options
@@ -40,8 +41,9 @@ class text_filter extends \core_filters\text_filter {
      */
     public function filter($text, array $options = []) {
         global $PAGE;
-        // Moodle's HTML cleaning removes the data attributes; the image then keeps only its tiny_algorithm-run class.
-        if (!is_string($text) || (strpos($text, 'data-algorithm-run') === false && strpos($text, 'tiny_algorithm-run') === false)) {
+        // Moodle's HTML cleaning removes the data attributes; the image then keeps only its tiny_algorithm-image class.
+        // Interactive images also have the tiny_algorithm-image class, and data-algorithm-run starts with data-algorithm.
+        if (!is_string($text) || (strpos($text, 'data-algorithm') === false && strpos($text, 'tiny_algorithm-image') === false)) {
             return $text;
         }
         $PAGE->requires->js_call_amd('filter_algorithm/viewer', 'init');

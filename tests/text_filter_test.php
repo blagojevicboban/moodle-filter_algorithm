@@ -36,13 +36,21 @@ final class text_filter_test extends \advanced_testcase {
         return strpos($PAGE->requires->get_end_code(), 'filter_algorithm/viewer') !== false;
     }
 
-    public function test_text_without_interactive_algorithm(): void {
+    public function test_text_without_algorithm(): void {
         $this->resetAfterTest();
         $filter = new text_filter(\context_system::instance(), []);
-        $text = '<p>Text</p><img src="data:image/svg+xml;base64,AAAA" alt="Algorithm" data-algorithm="AAAA">';
+        $text = '<p>Text</p><img src="photo.png" alt="Photo">';
         $this->assertSame($text, $filter->filter($text));
         $this->assertSame('', $filter->filter(''));
         $this->assertFalse($this->viewer_loaded());
+    }
+
+    public function test_static_algorithm_is_drawn_again(): void {
+        $this->resetAfterTest();
+        $filter = new text_filter(\context_system::instance(), []);
+        $text = purify_html('<p><img src="@@PLUGINFILE@@/sum.svg" class="tiny_algorithm-image" alt="Algorithm"></p>');
+        $this->assertSame($text, $filter->filter($text));
+        $this->assertTrue($this->viewer_loaded());
     }
 
     public function test_text_with_interactive_algorithm(): void {

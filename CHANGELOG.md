@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- **Older diagrams get the current look:** algorithm images that are not interactive are drawn again from the model
+  they store, so diagrams inserted before tiny_algorithm 2.1 show the arrows without being edited. The saved text
+  is not changed; the viewer replaces only the picture in the page.
+
 ## 2.0.0 – 2026-11-02 (stable)
 
 - With tiny_algorithm 2.0.0: diagrams stored only in their SVG (read with the classes `tiny_algorithm-image` /

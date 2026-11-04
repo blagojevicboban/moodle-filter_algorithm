@@ -24,6 +24,7 @@
 import {restoreAttributes} from 'tiny_algorithm/embed';
 import {deserialize} from 'tiny_algorithm/model';
 import {AlgorithmRunner} from 'tiny_algorithm/runner';
+import {renderProgram} from 'tiny_algorithm/render';
 import {AlgorithmWorkspace} from 'tiny_algorithm/workspace';
 import {deserializeTests} from 'tiny_algorithm/tests';
 import {load as loadStrings} from 'tiny_algorithm/langstrings';
@@ -31,6 +32,8 @@ import {eventTypes} from 'core_filters/events';
 
 // The class marks images whose attributes were removed by Moodle's HTML cleaning; they are read back from the SVG file.
 const SELECTOR = 'img[data-algorithm][data-algorithm-run], img.tiny_algorithm-run';
+// Images that are not interactive are drawn again from their model, so older diagrams get the current look (arrows).
+const STATIC = 'img[data-algorithm]:not([data-algorithm-run]), img.tiny_algorithm-image:not(.tiny_algorithm-run)';
 // Diagrams are built when they come near the screen, so a page with many of them opens quickly.
 const MARGIN = '300px';
 const seen = new WeakSet();
@@ -81,6 +84,29 @@ const show = async(img) => {
     });
 };
 
+/**
+ * Draw a static algorithm image again from the model it stores.
+ *
+ * @param {HTMLImageElement} img
+ */
+const redraw = async(img) => {
+    if (!img.isConnected || !(await restoreAttributes(img))) {
+        return;
+    }
+    if (img.hasAttribute('data-algorithm-run')) {
+        show(img); // The SVG says the diagram is interactive after all.
+        return;
+    }
+    try {
+        const svg = renderProgram(deserialize(img.getAttribute('data-algorithm')));
+        img.src = URL.createObjectURL(new Blob([svg], {type: 'image/svg+xml'}));
+    } catch (e) {
+        // Keep the saved picture when the model cannot be drawn.
+    }
+};
+
+const handle = (img) => (img.matches(SELECTOR) ? show(img) : redraw(img));
+
 const mount = (root) => {
     if (!root || !root.querySelectorAll) {
         return;
@@ -88,16 +114,17 @@ const mount = (root) => {
     if (!observer && 'IntersectionObserver' in window) {
         observer = new IntersectionObserver((entries) => entries.filter((e) => e.isIntersecting).forEach((e) => {
             observer.unobserve(e.target);
-            show(e.target);
+            handle(e.target);
         }), {rootMargin: MARGIN});
     }
-    const images = root.matches && root.matches(SELECTOR) ? [root] : [...root.querySelectorAll(SELECTOR)];
+    const all = `${SELECTOR}, ${STATIC}`;
+    const images = root.matches && root.matches(all) ? [root] : [...root.querySelectorAll(all)];
     images.filter((img) => !seen.has(img)).forEach((img) => {
         seen.add(img);
         if (observer) {
             observer.observe(img);
         } else {
-            show(img);
+            handle(img);
         }
     });
 };
