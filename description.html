@@ -1,33 +1,54 @@
-<div class="algorithm-description">
-  <h2>Algorithm Viewer: Run / Step for Flowcharts</h2>
+<div>
+  <p><strong>Algorithm Viewer: Run / Step for Flowcharts</strong></p>
   <p><em>Makes flowcharts created with tiny_algorithm interactive for readers, in pages, course summaries, forums and quiz text.</em></p>
+  <div>
+    <a href="https://github.com/blagojevicboban/moodle-filter_algorithm/actions/workflows/ci.yml" target="_blank" rel="noreferrer noopener"><img src="https://github.com/blagojevicboban/moodle-filter_algorithm/actions/workflows/ci.yml/badge.svg" alt="Moodle Plugin CI"></a>
+    <a href="https://moodle.org" target="_blank" rel="noreferrer noopener"><img src="https://img.shields.io/badge/Moodle-4.5%20to%205.3-orange.svg" alt="Moodle 4.5 to 5.3"></a>
+    <a href="https://github.com/blagojevicboban/moodle-filter_algorithm" target="_blank" rel="noreferrer noopener"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License GPL v3"></a>
+  </div>
 
-  <h3>Features</h3>
+  <p><strong>Live demo:</strong> try the plugin on <a href="https://algorithm.tsp.edu.rs" target="_blank" rel="noreferrer noopener">algorithm.tsp.edu.rs</a>. Log in as a guest, or use the demo accounts <strong>teacher</strong> and <strong>student</strong> (password <strong>Demo-2026</strong>). Everything is reset every night.</p>
+
+  <hr>
+  <p><strong>What's New in v2.0.0</strong></p>
   <ul>
-    <li><strong>Run / Step / Reset</strong> with the current block highlighted and a speed slider.</li>
-    <li><strong>Console with input</strong>, variable watch and generated code (Python, C, C++, Java, C#, JavaScript, Pascal) beside the diagram.</li>
-    <li><strong>Zoom</strong> buttons and Ctrl + mouse wheel.</li>
+    <li><strong>With tiny_algorithm 2.0:</strong> matrices, function tests in the exercises, and diagrams stored only in their image.</li>
+    <li><strong>Older diagrams:</strong> diagrams from 1.x keep working.</li>
+  </ul>
+
+  <hr>
+  <p><strong>Core features</strong></p>
+  <ul>
+    <li><strong>Run / Step / Reset:</strong> the current block is highlighted, with a speed slider.</li>
+    <li><strong>Console with input:</strong> variable watch and generated code (Python, C, C++, Java, C#, JavaScript, Pascal) beside the diagram.</li>
+    <li><strong>Zoom:</strong> buttons and Ctrl + mouse wheel.</li>
     <li><strong>Runs in the reader's browser:</strong> nothing is sent to the server.</li>
     <li><strong>Opt-in per diagram:</strong> only diagrams inserted with the Interactive option are replaced.</li>
     <li><strong>Edit and test:</strong> when the teacher allows it, students edit their own copy and run the teacher's tests.</li>
   </ul>
 
-  <h3>What's new in 2.0.0</h3>
+  <hr>
+  <p><strong>The algorithm plugins</strong></p>
   <ul>
-    <li>With tiny_algorithm 2.0: matrices, function tests in the exercises, and diagrams stored only in their image.</li>
-    <li>Diagrams from 1.x keep working.</li>
+    <li><strong><a href="https://marketplace.moodle.com/plugins/tiny_algorithm" target="_blank" rel="noreferrer noopener">Algorithm (flowchart)</a></strong>: the flowchart editor in TinyMCE, with the interpreter and code generation.</li>
+    <li><strong><a href="https://marketplace.moodle.com/plugins/filter_algorithm" target="_blank" rel="noreferrer noopener">Algorithm viewer (Run / Step)</a></strong> (this plugin): Run / Step for readers and the student features in any content.</li>
+    <li><strong><a href="https://marketplace.moodle.com/plugins/qtype_algorithm" target="_blank" rel="noreferrer noopener">Algorithm question type</a></strong>: quiz questions graded automatically with tests.</li>
   </ul>
 
-  <h3>Requirements</h3>
+  <hr>
+  <p><strong>Requirements</strong></p>
   <ul>
-    <li>Moodle 4.5 LTS to 5.3 (PHP as required by your Moodle version).</li>
-    <li>The tiny_algorithm plugin, version 2.0.0 or newer. After installing, switch the filter <strong>On</strong> in Site administration, Plugins, Filters, Manage filters.</li>
+    <li><strong>Moodle:</strong> 4.5 LTS to 5.3 (PHP as required by your Moodle version).</li>
+    <li><strong>tiny_algorithm:</strong> version 2.0.0 or newer. After installing, switch the filter <strong>On</strong> in Site administration, Plugins, Filters, Manage filters.</li>
   </ul>
 
-  <h3>Privacy</h3>
+  <hr>
+  <p><strong>Privacy</strong></p>
   <p>The program runs in the reader's browser and nothing is sent anywhere. Two display preferences (code and variable panels) and the student's own copy of an editable diagram are kept in the browser's local storage. The plugin implements the Moodle Privacy API (no personal data stored).</p>
 
-  <p>Languages: English and Serbian (Latin and Cyrillic). Source, documentation and issue tracker:
-    <a href="https://github.com/blagojevicboban/moodle-filter_algorithm" target="_blank" rel="noreferrer noopener">github.com/blagojevicboban/moodle-filter_algorithm</a>.
+  <hr>
+  <p>Developed by <strong>Boban Blagojevi&#263;</strong>. Languages: English and Serbian (Latin and Cyrillic).<br>
+    Source, documentation and issue tracker:
+    <a href="https://github.com/blagojevicboban/moodle-filter_algorithm" target="_blank" rel="noreferrer noopener">github.com/blagojevicboban/moodle-filter_algorithm</a><br>
     Licensed under the GNU GPL v3 or later.</p>
 </div>

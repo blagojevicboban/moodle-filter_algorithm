@@ -10,6 +10,8 @@
 text is shown (a Page, course summary, forum post, quiz text…), the diagram gets **Run**, **Step** and **Reset** buttons.
 
 > Status: **stable** (2.0).
+>
+> 🌐 **Live demo:** [algorithm.tsp.edu.rs](https://algorithm.tsp.edu.rs) (log in as a guest, or use `teacher` / `student` with password `Demo-2026`; reset every night)
 
 ## ✨ Features
 
