@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 2.2.0 – 2026-11-05 (stable)
 
 - **Older diagrams get the current look:** algorithm images that are not interactive are drawn again from the model
   they store, so diagrams inserted before tiny_algorithm 2.1 show the arrows without being edited. The saved text
