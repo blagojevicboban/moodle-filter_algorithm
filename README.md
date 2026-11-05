@@ -35,8 +35,8 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 
 | | |
 |---|---|
-| **Page: Run, code beside the diagram, variables** | **Quiz: a diagram in a multiple choice question** |
-| ![Page](docs/screenshots/reader-view.png) | ![Quiz](docs/screenshots/quiz-analyse.png) |
+| **Page: Step, the current block, the branch taken and its line of code** | **Exercise: the student's own copy and the teacher's tests** |
+| ![Page](docs/screenshots/reader-view.png) | ![Exercise](docs/screenshots/exercise.png) |
 
 ## 📋 Requirements
 
