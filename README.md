@@ -19,7 +19,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 |---------|-------------|
 | ▶️ **Run / Step / Reset** | Run the whole algorithm or step one block at a time, the current block is highlighted |
 | ⌨️ **Console with Input** | *Output* blocks print to a console, *Input* blocks show an input field |
-| 💻 **Code Beside the Diagram** | Python, C, C++, Java, C#, JavaScript or Pascal with a language selector and **Copy**; below the diagram on narrow pages |
+| 💻 **Code Beside the Diagram** | Pseudo-code, Python, C, C++, Java, C#, JavaScript, Pascal, Visual Basic .NET, Go, Rust or Kotlin (with tiny_algorithm 2.4) with a language selector and **Copy**; below the diagram on narrow pages; a **Text description** (pseudo-code) under the diagram |
 | 🔍 **Variable Watch** | Value of every variable at the current step, changed values highlighted |
 | 🐢 **Speed Slider** | Slow down to follow the logic, or speed up |
 | 🔎 **Zoom** | **−**, **+**, **100%**, **Fit** or **Ctrl + mouse wheel**; wide diagrams start fitted |
