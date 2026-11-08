@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.5.0 – 2026-11-15 (stable)
+
+- **Synchronized 2.5.0 release:** unified versioning and build alignment with tiny_algorithm and qtype_algorithm (build 2026111500).
+- **Dependencies update:** requires tiny_algorithm 2.5.0 (2026111500).
+- **Maintenance & QA:** rebuilt AMD modules with Moodle Grunt, validated copyright headers across all files.
+
 ## 2.2.0 – 2026-11-05 (stable)
 
 - **Older diagrams get the current look:** algorithm images that are not interactive are drawn again from the model
