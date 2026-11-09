@@ -99,7 +99,8 @@ const redraw = async(img) => {
     }
     try {
         const svg = renderProgram(deserialize(img.getAttribute('data-algorithm')));
-        img.src = URL.createObjectURL(new Blob([svg], {type: 'image/svg+xml'}));
+        // A data URI needs no clean-up (an object URL would stay in memory as long as the page is open).
+        img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
     } catch (e) {
         // Keep the saved picture when the model cannot be drawn.
     }

@@ -1,10 +1,19 @@
 # Changelog
 
-## 2.5.1 – 2026-11-15 (stable)
+## 2.5.3 – 2026-11-09 (stable)
+
+- **Comments switch** (with tiny_algorithm 2.5.3): diagrams with commented blocks can show all the comments at once,
+  numbered, under the diagram.
+- **One viewer per page:** the viewer module is loaded once per page, however many texts with algorithms the page has.
+- **No leftover object URLs:** a diagram that is drawn again uses a data URI, so nothing stays in the browser's memory.
+- Version number 2.5.3, the same as tiny_algorithm and qtype_algorithm. Requires tiny_algorithm 2.5.3 (2026111503),
+  which also makes Run and Step fast with big arrays and limits strings and arrays.
+
+## 2.5.1 – 2026-11-08 (stable)
 
 - Requires tiny_algorithm 2.5.1 (2026111501).
 
-## 2.5.0 – 2026-11-15 (stable)
+## 2.5.0 – 2026-11-08 (stable)
 
 - **Synchronized 2.5.0 release:** unified versioning and build alignment with tiny_algorithm and qtype_algorithm (build 2026111500).
 - **Dependencies update:** requires tiny_algorithm 2.5.0 (2026111500).

@@ -42,7 +42,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 
 - **Moodle**: 4.5 LTS or newer (4.5, 5.0, 5.1, 5.2 and 5.3 tested)
 - **PHP**: 8.2+
-- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) 2.2.0+**: must be installed first (this filter reuses its
+- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) 2.5.3+**: must be installed first (this filter reuses its
   `runner`, `render`, `model`, `interpreter` and `zoom` modules)
 
 ## 🚀 Installation

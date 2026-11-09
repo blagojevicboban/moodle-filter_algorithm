@@ -61,6 +61,20 @@ final class text_filter_test extends \advanced_testcase {
         $this->assertTrue($this->viewer_loaded());
     }
 
+    public function test_viewer_is_loaded_once_per_page(): void {
+        global $PAGE;
+        $this->resetAfterTest();
+        $filter = new text_filter(\context_system::instance(), []);
+        $text = '<img src="x.svg" alt="Algorithm" data-algorithm="AAAA" data-algorithm-run="1">';
+        $filter->filter($text);
+        // One call of the module writes its name more than once (pending, require, complete).
+        $once = substr_count($PAGE->requires->get_end_code(), 'filter_algorithm/viewer');
+        $this->assertGreaterThan(0, $once);
+        $filter->filter($text);
+        (new text_filter(\context_system::instance(), []))->filter($text);
+        $this->assertSame($once, substr_count($PAGE->requires->get_end_code(), 'filter_algorithm/viewer'));
+    }
+
     public function test_cleaned_interactive_algorithm(): void {
         $this->resetAfterTest();
         $filter = new text_filter(\context_system::instance(), []);

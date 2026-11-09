@@ -32,6 +32,9 @@ namespace filter_algorithm;
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class text_filter extends \core_filters\text_filter {
+    /** @var \WeakMap|null pages ($PAGE objects) that already load the viewer, so it is started once per page */
+    protected static $pages = null;
+
     /**
      * Load the viewer module when the text contains an algorithm image; the text itself is left unchanged.
      *
@@ -46,7 +49,11 @@ class text_filter extends \core_filters\text_filter {
         if (!is_string($text) || (strpos($text, 'data-algorithm') === false && strpos($text, 'tiny_algorithm-image') === false)) {
             return $text;
         }
-        $PAGE->requires->js_call_amd('filter_algorithm/viewer', 'init');
+        self::$pages = self::$pages ?? new \WeakMap();
+        if (!isset(self::$pages[$PAGE])) {
+            self::$pages[$PAGE] = true;
+            $PAGE->requires->js_call_amd('filter_algorithm/viewer', 'init');
+        }
         return $text;
     }
 }
