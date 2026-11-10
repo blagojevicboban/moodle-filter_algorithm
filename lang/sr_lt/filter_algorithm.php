@@ -24,6 +24,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['codeforce'] = 'Koristi ovaj jezik za svaki algoritam, i za one koji su izabrali drugi';
+$string['codelang'] = 'Jezik koda';
+$string['codelang_help'] = 'Programski jezik generisanog koda na ovom kursu (ili kategoriji, ili aktivnosti). Algoritam koji je izabrao svoj jezik zadržava ga, osim kada je uključena sledeća opcija. Učenik može da promeni jezik u panelu koda ako jezik nije zaključan; izbor se pamti za ovaj kurs.';
+$string['codelang_inherit'] = 'Kao na višem nivou (kategorija ili sajt)';
+$string['codelock'] = 'Učenici ne mogu da promene jezik';
 $string['filtername'] = 'Prikaz algoritma (Pokreni / Korak)';
 $string['pluginname'] = 'Prikaz algoritma (Pokreni / Korak)';
 $string['privacy:metadata'] = 'Filter za prikaz algoritama ne čuva lične podatke na serveru. Pregledač u svom lokalnom skladištu čuva nekoliko podešavanja prikaza i, kod dijagrama koje učenici mogu da menjaju, učenikovu kopiju algoritma.';

@@ -24,6 +24,11 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['codeforce'] = 'Use this language for every algorithm, also those that chose another one';
+$string['codelang'] = 'Code language';
+$string['codelang_help'] = 'The programming language of the generated code in this course (or category, or activity). An algorithm that chose its own language keeps it, unless the next option is ticked. A student can change the language in the code panel unless it is locked; the choice is remembered in this course.';
+$string['codelang_inherit'] = 'As set above (category or site)';
+$string['codelock'] = 'Students cannot change the language';
 $string['filtername'] = 'Algorithm viewer (Run / Step)';
 $string['pluginname'] = 'Algorithm viewer (Run / Step)';
 $string['privacy:metadata'] = 'The Algorithm viewer filter does not store any personal data on the server. The browser keeps a few display settings and, in editable diagrams, the student\'s own copy of the algorithm in its local storage.';

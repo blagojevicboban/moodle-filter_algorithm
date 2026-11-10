@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.8.0 – 2026-11-10 (stable)
+
+- **Code language of a course:** the local settings of the filter (Course, More, Filters, Algorithm viewer, Settings)
+  choose the language of the generated code for a course, a category or an activity, may use it for every algorithm and
+  may lock it for students. The viewer gets these settings from the page.
+- Requires tiny_algorithm 2.8.0 (2026111507).
+
 ## 2.5.3 – 2026-11-09 (stable)
 
 - **Comments switch** (with tiny_algorithm 2.5.3): diagrams with commented blocks can show all the comments at once,

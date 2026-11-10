@@ -39,6 +39,8 @@ const MARGIN = '300px';
 const seen = new WeakSet();
 let initialised = false;
 let observer = null;
+// Code languages of the site and the course (tiny_algorithm/codelang).
+let codeConfig = {};
 
 /**
  * Replace an algorithm image with its interactive diagram.
@@ -62,6 +64,7 @@ const show = async(img) => {
         lang: document.documentElement.lang,
         showCode: img.getAttribute('data-algorithm-code') !== '0',
         showWatch: img.getAttribute('data-algorithm-watch') !== '0',
+        codeConfig,
     };
     if (img.getAttribute('data-algorithm-edit') !== '1') {
         new AlgorithmRunner(host, program, opts);
@@ -130,7 +133,8 @@ const mount = (root) => {
     });
 };
 
-export const init = async() => {
+export const init = async(config = {}) => {
+    codeConfig = config || {};
     await loadStrings();
     mount(document);
     if (!initialised) {

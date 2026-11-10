@@ -52,7 +52,9 @@ class text_filter extends \core_filters\text_filter {
         self::$pages = self::$pages ?? new \WeakMap();
         if (!isset(self::$pages[$PAGE])) {
             self::$pages[$PAGE] = true;
-            $PAGE->requires->js_call_amd('filter_algorithm/viewer', 'init');
+            // The code language of the site and of the course of the page.
+            $config = \tiny_algorithm\local\code_language::for_context($PAGE->context);
+            $PAGE->requires->js_call_amd('filter_algorithm/viewer', 'init', [$config]);
         }
         return $text;
     }

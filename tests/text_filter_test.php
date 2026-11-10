@@ -84,4 +84,17 @@ final class text_filter_test extends \advanced_testcase {
         $this->assertSame($text, $filter->filter($text));
         $this->assertTrue($this->viewer_loaded());
     }
+
+    public function test_viewer_gets_the_code_language_of_the_course(): void {
+        global $CFG, $PAGE;
+        require_once($CFG->libdir . '/filterlib.php');
+        $this->resetAfterTest();
+        $course = $this->getDataGenerator()->create_course();
+        $context = \context_course::instance($course->id);
+        filter_set_local_config('algorithm', $context->id, 'codelang', 'csharp');
+        $PAGE->set_context($context);
+        $filter = new text_filter($context, []);
+        $filter->filter('<img src="x.svg" alt="Algorithm" data-algorithm="AAAA" data-algorithm-run="1">');
+        $this->assertStringContainsString('"default":"csharp"', $PAGE->requires->get_end_code());
+    }
 }
