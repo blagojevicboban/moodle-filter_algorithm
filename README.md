@@ -37,6 +37,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 |---|---|
 | **Page: Step, the current block, the branch taken and its line of code** | **Exercise: the student's own copy and the teacher's tests** |
 | ![Page](docs/screenshots/reader-view.png) | ![Exercise](docs/screenshots/exercise.png) |
+| ![Class work](docs/screenshots/class-work.png) | |
 
 ## 📋 Requirements
 
