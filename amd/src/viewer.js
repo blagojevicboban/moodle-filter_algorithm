@@ -29,6 +29,7 @@ import {AlgorithmWorkspace} from 'tiny_algorithm/workspace';
 import {deserializeTests} from 'tiny_algorithm/tests';
 import {load as loadStrings} from 'tiny_algorithm/langstrings';
 import {eventTypes} from 'core_filters/events';
+import Ajax from 'core/ajax';
 
 // The class marks images whose attributes were removed by Moodle's HTML cleaning; they are read back from the SVG file.
 const SELECTOR = 'img[data-algorithm][data-algorithm-run], img.tiny_algorithm-run';
@@ -41,6 +42,27 @@ let initialised = false;
 let observer = null;
 // Code languages of the site and the course (tiny_algorithm/codelang).
 let codeConfig = {};
+// The class view: the context of the page, whether the user sends their copies and whether they see the class.
+let work = {contextid: 0, share: false, view: false};
+
+/**
+ * Send the student's copy of an exercise to the class view.
+ *
+ * @param {string} workkey which exercise
+ * @param {string} program the copy (JSON), '' when it is back to the original
+ * @returns {Promise}
+ */
+const shareWork = (workkey, program) => Ajax.call([{methodname: 'filter_algorithm_save_work',
+    args: {contextid: work.contextid, workkey, program}}])[0];
+
+/**
+ * The copies of an exercise the class changed.
+ *
+ * @param {string} workkey which exercise
+ * @returns {Promise<Array>}
+ */
+const loadClass = (workkey) => Ajax.call([{methodname: 'filter_algorithm_get_class_work',
+    args: {contextid: work.contextid, workkey}}])[0].then((r) => r.copies);
 
 /**
  * Replace an algorithm image with its interactive diagram.
@@ -84,6 +106,8 @@ const show = async(img) => {
         tests: deserializeTests(img.getAttribute('data-algorithm-tests')),
         showSolution: img.getAttribute('data-algorithm-showsolution') === '1',
         scope: (window.M && window.M.cfg && window.M.cfg.contextid) || '',
+        share: work.share && work.contextid ? shareWork : null,
+        loadClass: work.view && work.contextid ? loadClass : null,
     });
 };
 
@@ -133,8 +157,15 @@ const mount = (root) => {
     });
 };
 
-export const init = async(config = {}) => {
+/**
+ * Start the viewer on the page.
+ *
+ * @param {Object} [config] code languages of the site and the course
+ * @param {Object} [classWork] the class view: {contextid, share, view}
+ */
+export const init = async(config = {}, classWork = {}) => {
     codeConfig = config || {};
+    work = {...work, ...(classWork || {})};
     await loadStrings();
     mount(document);
     if (!initialised) {

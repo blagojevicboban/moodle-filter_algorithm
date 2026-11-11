@@ -54,7 +54,14 @@ class text_filter extends \core_filters\text_filter {
             self::$pages[$PAGE] = true;
             // The code language of the site and of the course of the page.
             $config = \tiny_algorithm\local\code_language::for_context($PAGE->context);
-            $PAGE->requires->js_call_amd('filter_algorithm/viewer', 'init', [$config]);
+            // The class view: students send their copies of the exercises, teachers see the copies of the class.
+            $context = $PAGE->context;
+            $work = ['contextid' => $context->id, 'share' => false, 'view' => false];
+            if (isloggedin() && !isguestuser() && $context->get_course_context(false)) {
+                $work['share'] = has_capability('filter/algorithm:sharework', $context);
+                $work['view'] = has_capability('filter/algorithm:viewclasswork', $context);
+            }
+            $PAGE->requires->js_call_amd('filter_algorithm/viewer', 'init', [$config, $work]);
         }
         return $text;
     }

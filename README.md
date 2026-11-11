@@ -42,7 +42,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 
 - **Moodle**: 4.5 LTS or newer (4.5, 5.0, 5.1, 5.2 and 5.3 tested)
 - **PHP**: 8.2+
-- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) 2.5.3+**: must be installed first (this filter reuses its
+- **[tiny_algorithm](https://github.com/blagojevicboban/moodle-tiny_algorithm) 2.15.0+**: must be installed first (this filter reuses its
   `runner`, `render`, `model`, `interpreter` and `zoom` modules)
 
 ## 🚀 Installation
@@ -135,3 +135,10 @@ GNU GPL v3 or later - see [LICENSE](LICENSE).
 ---
 
 Made with ❤️ for teaching programming
+
+## Class work (2.15)
+
+In an exercise, students' changed copies are kept on the server (the last copy of each student). Teachers with
+`filter/algorithm:viewclasswork` get a **Class work** button: the copies of the class as small diagrams with their test
+results, refreshed every 10 seconds; a click shows one large on the projector, and the names can be hidden. Students
+need `filter/algorithm:sharework` (given to the student role). In separate groups, a teacher sees only their groups.

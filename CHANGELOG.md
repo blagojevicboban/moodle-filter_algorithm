@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.15.0 – 2026-11-11 (stable)
+
+- **Class work:** in an exercise (Students can edit and test the algorithm), the copy a student changed is kept on the
+  server too (table filter_algorithm_work, the last copy of each student for each exercise; removed when the student
+  restores the original). The teacher gets a Class work button with the copies of the class: small diagrams with the
+  name, the time and the result of the tests, refreshed every 10 seconds; a click shows one large to run on the
+  projector, and the names can be hidden.
+- Capabilities filter/algorithm:sharework (students) and filter/algorithm:viewclasswork (teachers, managers); in a
+  course with separate groups a teacher who cannot access all groups sees only the students of their groups.
+- Web services filter_algorithm_save_work and filter_algorithm_get_class_work (AJAX); the privacy API now describes,
+  exports and deletes the copies.
+- PHPUnit tests of the services, the groups and the privacy API; new strings in English, Serbian Latin and Serbian
+  Cyrillic. Requires tiny_algorithm 2.15.0 (2026111514).
+
 ## 2.8.0 – 2026-11-10 (stable)
 
 - **Code language of a course:** the local settings of the filter (Course, More, Filters, Algorithm viewer, Settings)

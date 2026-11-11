@@ -25,9 +25,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'filter_algorithm';
-$plugin->version   = 2026111503;
+$plugin->version   = 2026111504;
 $plugin->requires  = 2024100700; // Moodle 4.5.
 $plugin->supported = [405, 503];
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '2.8.0';
-$plugin->dependencies = ['tiny_algorithm' => 2026111507];
+$plugin->release   = '2.15.0';
+$plugin->dependencies = ['tiny_algorithm' => 2026111514];
