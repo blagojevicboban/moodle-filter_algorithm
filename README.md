@@ -23,13 +23,13 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 | 🔍 **Variable Watch** | Value of every variable at the current step, changed values highlighted |
 | 🐢 **Speed Slider** | Slow down to follow the logic, or speed up |
 | 🔎 **Zoom** | **−**, **+**, **100%**, **Fit** or **Ctrl + mouse wheel**; wide diagrams start fitted |
-| 🧳 **Runs in the Browser** | Nothing is sent to the server; a student's edited copy is kept only in their browser |
+| 🧳 **Runs in the Browser** | The algorithm runs in the browser; in an exercise a student's changed copy is kept in the browser and on the server, so it follows the student to another device (the newer copy wins) |
 | ✍️ **Edit and Test** | When the teacher allows it: **Edit** an own copy, **Test** against the teacher's tests (✓ / ✗ with the differences), **Restore original**, **Full screen**, **Show solution** |
 | 💬 **Forums and Assignments** | Also works where Moodle cleans the HTML (forum posts, assignment text…), for diagrams inserted with tiny_algorithm 1.2.0 or newer |
 | 🚀 **Fast Pages** | A diagram is built only when it comes near the screen, so a page with many diagrams opens quickly |
 | ✅ **Opt-in per Diagram** | Only diagrams inserted with **Interactive** are replaced; others stay normal images |
 | 🌐 **Languages** | English, Serbian Latin and Serbian Cyrillic |
-| 🔒 **Privacy** | GDPR compliant (Privacy API, no personal data on the server; display settings and students' edited copies stay in the browser) |
+| 🔒 **Privacy** | GDPR compliant: the Privacy API describes, exports and deletes the students' copies of exercises kept on the server; display settings stay in the browser |
 
 ## 🖼️ Screenshots
 
@@ -143,3 +143,10 @@ In an exercise, students' changed copies are kept on the server (the last copy o
 `filter/algorithm:viewclasswork` get a **Class work** button: the copies of the class as small diagrams with their test
 results, refreshed every 10 seconds; a click shows one large on the projector, and the names can be hidden. Students
 need `filter/algorithm:sharework` (given to the student role). In separate groups, a teacher sees only their groups.
+
+## The copy follows the student (2.19)
+
+When a student opens an exercise, the workspace (tiny_algorithm 2.19) also asks the server for the student's copy and
+uses the newer one: a copy changed at school continues at home. A copy that is being edited is never replaced, and
+**Restore original** removes the copy in the browser and on the server. Without `filter/algorithm:sharework` the copy
+stays in the browser only. The copies are deleted with their activity or course.

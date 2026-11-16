@@ -56,6 +56,15 @@ const shareWork = (workkey, program) => Ajax.call([{methodname: 'filter_algorith
     args: {contextid: work.contextid, workkey, program}}])[0];
 
 /**
+ * The student's own copy of an exercise as the server keeps it (another device may have changed it).
+ *
+ * @param {string} workkey which exercise
+ * @returns {Promise<{program: string, timemodified: number}>}
+ */
+const loadMine = (workkey) => Ajax.call([{methodname: 'filter_algorithm_get_my_work',
+    args: {contextid: work.contextid, workkey}}])[0];
+
+/**
  * The copies of an exercise the class changed.
  *
  * @param {string} workkey which exercise
@@ -108,6 +117,7 @@ const show = async(img) => {
         scope: (window.M && window.M.cfg && window.M.cfg.contextid) || '',
         share: work.share && work.contextid ? shareWork : null,
         loadClass: work.view && work.contextid ? loadClass : null,
+        loadMine: work.share && work.contextid ? loadMine : null,
     });
 };
 

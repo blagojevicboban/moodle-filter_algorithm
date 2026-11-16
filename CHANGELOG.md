@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.19.0 – 2026-11-16 (stable)
+
+- **The student's copy follows the student:** the copy of an exercise the server keeps (since 2.15) now also comes back
+  to the student on another device or browser. With tiny_algorithm 2.19 the workspace asks for it when the page opens
+  and uses the newer of the two copies (the one of this browser or the one of the server), says so with a short note,
+  and never replaces a copy the student is editing. Restore original removes the copy everywhere.
+- New web service filter_algorithm_get_my_work (AJAX, only the user's own copy, capability filter/algorithm:sharework).
+- The copies are removed with their activity or course (observers of course_module_deleted and course_deleted).
+- Privacy texts describe what the server keeps; PHPUnit tests/my_work_test.php; requires tiny_algorithm 2.19.0.
+
 ## 2.15.0 – 2026-11-11 (stable)
 
 - **Class work:** in an exercise (Students can edit and test the algorithm), the copy a student changed is kept on the

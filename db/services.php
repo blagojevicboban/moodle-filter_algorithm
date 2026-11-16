@@ -32,6 +32,13 @@ $functions = [
         'ajax' => true,
         'capabilities' => 'filter/algorithm:sharework',
     ],
+    'filter_algorithm_get_my_work' => [
+        'classname' => \filter_algorithm\external\get_my_work::class,
+        'description' => 'The student\'s own copy of an exercise, to continue on another device.',
+        'type' => 'read',
+        'ajax' => true,
+        'capabilities' => 'filter/algorithm:sharework',
+    ],
     'filter_algorithm_get_class_work' => [
         'classname' => \filter_algorithm\external\get_class_work::class,
         'description' => 'The copies of an exercise the students changed (class view).',

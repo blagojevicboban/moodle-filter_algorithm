@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['algorithm:sharework'] = 'Slanje sopstvene kopije vežbe nastavniku (prikaz razreda)';
+$string['algorithm:sharework'] = 'Čuvanje sopstvene kopije vežbe na serveru (prikaz razreda, drugi uređaji)';
 $string['algorithm:viewclasswork'] = 'Pregled kopija vežbe koje su učenici menjali (prikaz razreda)';
 $string['codeforce'] = 'Koristi ovaj jezik za svaki algoritam, i za one koji su izabrali drugi';
 $string['codelang'] = 'Jezik koda';
@@ -33,8 +33,8 @@ $string['codelang_inherit'] = 'Kao na višem nivou (kategorija ili sajt)';
 $string['codelock'] = 'Učenici ne mogu da promene jezik';
 $string['filtername'] = 'Prikaz algoritma (Pokreni / Korak)';
 $string['pluginname'] = 'Prikaz algoritma (Pokreni / Korak)';
-$string['privacy:metadata'] = 'Filter za prikaz algoritama ne čuva lične podatke na serveru. Pregledač u svom lokalnom skladištu čuva nekoliko podešavanja prikaza i, kod dijagrama koje učenici mogu da menjaju, učenikovu kopiju algoritma.';
-$string['privacy:metadata:work'] = 'Poslednja kopija vežbe koju je svaki učenik menjao, da bi nastavnik video rad razreda dok traje.';
+$string['privacy:metadata'] = 'Filter za prikaz algoritama čuva na serveru kopije vežbi koje su učenici menjali. Pregledač u svom lokalnom skladištu čuva nekoliko podešavanja prikaza i, kod dijagrama koje učenici mogu da menjaju, učenikovu kopiju algoritma.';
+$string['privacy:metadata:work'] = 'Poslednja kopija vežbe koju je svaki učenik menjao, da bi nastavnik video rad razreda dok traje, a učenik mogao da nastavi na drugom uređaju.';
 $string['privacy:metadata:work:contextid'] = 'Stranica sa vežbom.';
 $string['privacy:metadata:work:program'] = 'Algoritam učenika.';
 $string['privacy:metadata:work:timemodified'] = 'Kada je kopija sačuvana.';
