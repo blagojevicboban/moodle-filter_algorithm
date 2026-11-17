@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.20.0 – 2026-11-17 (stable)
+
+- **Twelve new languages:** German, French, Spanish, Italian, Portuguese, Polish, Croatian, Bosnian, Slovenian,
+  Macedonian, Slovak and Czech (lang/de, fr, es, it, pt, pl, hr, bs, sl, mk, sk, cs), every string of the plugin. A
+  language works once the site has its Moodle language pack. The translations were made with the help of AI and
+  checked for the placeholders and HTML of every string; they will also be offered to AMOS (lang.moodle.org).
+- Bosnian and Croatian start from the Serbian translation (ijekavian, Croatian words and infinitives).
+
 ## 2.19.0 – 2026-11-16 (stable)
 
 - **The student's copy follows the student:** the copy of an exercise the server keeps (since 2.15) now also comes back

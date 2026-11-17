@@ -28,7 +28,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 | 💬 **Forums and Assignments** | Also works where Moodle cleans the HTML (forum posts, assignment text…), for diagrams inserted with tiny_algorithm 1.2.0 or newer |
 | 🚀 **Fast Pages** | A diagram is built only when it comes near the screen, so a page with many diagrams opens quickly |
 | ✅ **Opt-in per Diagram** | Only diagrams inserted with **Interactive** are replaced; others stay normal images |
-| 🌐 **Languages** | English, Serbian Latin and Serbian Cyrillic |
+| 🌐 **Languages** | English, Serbian Latin and Serbian Cyrillic, German, French, Spanish, Italian, Portuguese, Polish, Croatian, Bosnian, Slovenian, Macedonian, Slovak and Czech |
 | 🔒 **Privacy** | GDPR compliant: the Privacy API describes, exports and deletes the students' copies of exercises kept on the server; display settings stay in the browser |
 
 ## 🖼️ Screenshots
@@ -104,7 +104,7 @@ filter/algorithm/
 │   ├── src/          # viewer.js
 │   └── build/        # Compiled module
 ├── classes/          # text_filter, privacy provider
-├── lang/             # en, sr_lt, sr_cr
+├── lang/             # en, sr_lt, sr_cr and 12 more
 ├── styles.css
 └── version.php       # Plugin metadata
 ```
@@ -114,6 +114,11 @@ filter/algorithm/
 - 🇬🇧 English
 - 🇷🇸 Srpski (Serbian, Latin: sr_lt)
 - 🇷🇸 Српски (Serbian, Cyrillic: sr_cr)
+- 🇩🇪 Deutsch (de), 🇫🇷 Français (fr), 🇪🇸 Español (es), 🇮🇹 Italiano (it), 🇵🇹 Português (pt), 🇵🇱 Polski (pl)
+- 🇭🇷 Hrvatski (hr), 🇧🇦 Bosanski (bs), 🇸🇮 Slovenščina (sl), 🇲🇰 Македонски (mk), 🇸🇰 Slovenčina (sk), 🇨🇿 Čeština (cs)
+
+The twelve translations of 2.23 were made with the help of AI and checked for the Moodle placeholders; corrections are
+welcome as issues or on [AMOS](https://lang.moodle.org).
 
 ## 📝 Changelog
 
