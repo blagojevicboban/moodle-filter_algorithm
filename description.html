@@ -22,11 +22,13 @@
   <p><strong>Core features</strong></p>
   <ul>
     <li><strong>Run / Step / Reset:</strong> the current block is highlighted, with a speed slider.</li>
-    <li><strong>Console with input:</strong> variable watch and generated code beside the diagram: pseudo-code and eleven languages with tiny_algorithm 2.4 (Python, C, C++, Java, C#, JavaScript, Pascal, Visual Basic .NET, Go, Rust, Kotlin).</li>
+    <li><strong>Console with input:</strong> variable watch and generated code beside the diagram: pseudo-code and thirteen languages (Python, C, C++, Java, C#, JavaScript, TypeScript, PHP, Pascal, Visual Basic .NET, Go, Rust, Kotlin); a course can set its code language.</li>
+    <li><strong>Arrays panel and call tree:</strong> arrays and matrices drawn while the algorithm runs, and every recursive call drawn as a tree.</li>
     <li><strong>Zoom and full screen:</strong> buttons in the corner of the diagram, Ctrl + mouse wheel and two-finger pinch.</li>
-    <li><strong>Runs in the reader's browser:</strong> nothing is sent to the server.</li>
+    <li><strong>Runs in the reader's browser:</strong> the algorithm runs on the reader's device; long pages load diagrams as they scroll into view, and a switch shows all comments.</li>
     <li><strong>Opt-in per diagram:</strong> only diagrams inserted with the Interactive option are replaced.</li>
-    <li><strong>Edit and test:</strong> when the teacher allows it, students edit their own copy and run the teacher's tests.</li>
+    <li><strong>Edit and test:</strong> when the teacher allows it, students edit their own copy and run the teacher's tests; the copy follows the student to another device.</li>
+    <li><strong>Class work:</strong> the teacher sees the students' copies of an exercise as small diagrams with their test results, in separate groups too, and shows one large on the projector.</li>
   </ul>
 
   <hr>
@@ -41,12 +43,12 @@
   <p><strong>Requirements</strong></p>
   <ul>
     <li><strong>Moodle:</strong> 4.5 LTS to 5.3 (PHP as required by your Moodle version).</li>
-    <li><strong>tiny_algorithm:</strong> version 2.5.3 or newer. After installing, switch the filter <strong>On</strong> in Site administration, Plugins, Filters, Manage filters.</li>
+    <li><strong>tiny_algorithm:</strong> version 2.19.0 or newer. After installing, switch the filter <strong>On</strong> in Site administration, Plugins, Filters, Manage filters.</li>
   </ul>
 
   <hr>
   <p><strong>Privacy</strong></p>
-  <p>The program runs in the reader's browser and nothing is sent anywhere. Two display preferences (code and variable panels) and the student's own copy of an editable diagram are kept in the browser's local storage. The plugin implements the Moodle Privacy API (no personal data stored).</p>
+  <p>The algorithm runs in the reader's browser and nothing is sent to external services. In exercises the server keeps the last copy each student changed (the algorithm, the page and the time), so the teacher can see the class work and the student can continue on another device; the copies are removed with their activity or course. Two display preferences and the student's copy are also kept in the browser's local storage. The plugin implements the Moodle Privacy API, which exports and deletes the copies.</p>
 
   <hr>
   <p>Developed by <strong>Boban Blagojevi&#263;</strong>. Languages: English, Serbian, German, French, Spanish, Italian, Portuguese, Polish, Croatian, Bosnian, Slovenian, Macedonian, Slovak and Czech.<br>
