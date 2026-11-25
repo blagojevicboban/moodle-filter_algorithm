@@ -11,7 +11,7 @@ text is shown (a Page, course summary, forum post, quiz text…), the diagram ge
 
 > Status: **stable** (2.2).
 >
-> 🌐 **Live demo:** [algorithm.tsp.edu.rs](https://algorithm.tsp.edu.rs) (log in as a guest, or use `teacher` / `student` with password `Demo-2026`; reset every night)
+> 🌐 **Live demo:** [demo.codelabedu.com](https://demo.codelabedu.com) (log in as a guest, or use `teacher` / `student` with password `Demo-2026`; reset every night)
 
 ## ✨ Features
 
